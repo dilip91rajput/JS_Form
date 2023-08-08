@@ -1,0 +1,87 @@
+<html lang = "en">  
+   <head>  
+      <meta charset = "utf-8">  
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">  
+      <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">         
+      <title> Registeration Form </title>  
+      <link rel = "stylesheet" href="./styles/style.css">
+   </head>  
+   <body>  
+    <div class="container register-form">  
+            <div id="registrationForm" class="form">  
+
+                <form action="" id="registerForm" method="POST" enctype="multipart/form-data">
+                    <div class="note">
+                    <h1> Registration Form </h1>
+                    <div class="formRadio">
+                        <label><input type="radio" class="registration-radio" name="registrationType" checked value="company">Company Form</label>
+                        <label><input type="radio" class="registration-radio"  name="registrationType" value="student">Student Form </label>
+                    </div>
+                </div>
+                <div id="registrationForm1" class="form-content formContainer">  
+                    <div class="row">  
+                        <div class="col-md-6">  
+                            <div class="form-group">  
+                                <input type="text" id="userName" required class="form-control"  name="name" placeholder="Your Name *" value=""/>  
+                            </div>  
+                            <div class="form-group">  
+                                <input type="text" id="userPhone" required class="form-control"  name="phone" placeholder="Phone Number *" value=""/>  
+                            </div>
+                            <div class="form-group customerId">
+
+                            </div>
+                            <label class="student-fields">
+                            <div class="form-group">  
+                                <input type="text" class="form-control"  name="university" placeholder="University *" value=""/>  
+                            </div>
+                            <div class="form-group">  
+                                <input type="text" class="form-control"  name="studentID" placeholder="Student ID *" value=""/>  
+                            </div>
+                            </label> 
+                        </div>              
+                        <div class="col-md-6">  
+                            <div class="form-group">  
+                                <input type="text" id="userPassword" class="form-control" required name="password" placeholder="Your Password *" value=""/>  
+                            </div>  
+                            <div class="form-group">  
+                                <input type="text" class="form-control"  name="confirmpassword" required placeholder="Confirm Password *" value=""/>  
+                            </div>
+                            <label class="company-fields">
+                            <div class="form-group">  
+                                <input type="text" class="form-control"  name="companyName" placeholder="Company Name *" value=""/>  
+                            </div>
+                            <div class="form-group">  
+                                <input type="text" class="form-control"  name="companyAddress" placeholder="Company Address *" value=""/>  
+                            </div>
+                            </label> 
+                        </div>
+                     </div>  
+                    <div class="row align-items-center mt-4">  
+                            <div class="col">  
+                            <input type="text" class="form-control" required name="emailaddress" placeholder=" Enter Email Address">  
+                            </div>  
+                        </div> 
+                        <div class="row align-items-center mt-4">  
+                            <div class="col">  
+                            <input type="text" class="form-control"  name="address" placeholder=" Address">  
+                            </div>  
+                        </div>  
+                    <div class="row justify-content-start mt-4">  
+                            <div class="col">  
+                            <div class="form-check">  
+                                <label class="form-check-label">  
+                                <input type="checkbox" name="check" class="form-check-input">  
+                                I hereby agree to the <a href="/"> Terms and Conditions. </a>  
+                                </label>  
+                            </div>  
+                    <button type="submit" class="btnSubmit"> Submit </button>
+                    <!-- <button type="reset" class="btnSubmit"> reset </button>   -->
+                    </div>  
+                    </div>
+                </div>
+                </form> 
+            </div>
+    </div>        
+<script src="./js/register.js"></script>     
+</body>  
+</html>  
