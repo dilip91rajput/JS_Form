@@ -11,6 +11,21 @@ document.querySelector('.email').readOnly = true;
 // document.querySelector('.studentid').value = userData.studentID || '';
 // document.querySelector('.companyname').value = userData.companyName || '';
 
+// Upload Image
+const uploadImage = document.querySelector('.profileImage');
+const imageSrc = document.querySelector('#uploadedImage');
+uploadImage.addEventListener(('change'), function () {
+    if(this.files[0]) {
+        // alert('click')
+        var image = new FileReader()
+        image.readAsDataURL(this.files[0]);
+        console.log(image, 'picture')
+        image.addEventListener('load', function(event) {
+            imageSrc.setAttribute('src', event.target.result);
+        })
+    }
+})
+
 updateProfile.addEventListener('submit', (e) => {
     e.preventDefault();
     // console.log(e.target.value, "update Profile");
@@ -21,6 +36,13 @@ updateProfile.addEventListener('submit', (e) => {
     }
     console.log(profileData, 'profileData');
 
+    let selectedImage = uploadImage.files[0];
+
+    // selectedImage = selectedImage.name
+    
+
+    console.log(selectedImage, 'selectedImage')
+
     // update object user data
     const dataUpdated = {
         ...userData,
@@ -28,6 +50,7 @@ updateProfile.addEventListener('submit', (e) => {
         phone: profileData.phone,
         email: profileData.emailaddress,
         address: profileData.address,
+        profileimage: selectedImage.name,
     }
 
     console.log(dataUpdated, 'sdsads')
@@ -40,7 +63,8 @@ updateProfile.addEventListener('submit', (e) => {
                 name: profileData.name,
                 phone: profileData.phone,
                 emailaddress: profileData.emailaddress,
-                address: profileData.address
+                address: profileData.address,
+                profileimage: selectedImage.name,
             }
         return item; //return the original item if the condition is not met
     });
